@@ -7,7 +7,7 @@
 * 项目源文件全部位于 `.\HeroEraBattleground` 目录下
 
 ## 使用方法 ##
-###&ensp;&ensp;普通模式
+### &ensp;&ensp;普通模式 ###
 * 直接运行 `.\Realease\HeroEraBattleground.exe` 将开始游戏
 
 ### &ensp;&ensp;测试模式 ###
