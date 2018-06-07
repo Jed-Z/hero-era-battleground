@@ -1,3 +1,10 @@
+/* *************************
+* FileName: ui.cpp
+* Author: Jed Zhang
+* Site: https://www.jed123.com/hero-era-battleground-cpp.html
+* Date: 2018.6.7
+* Description: User interface definition.
+**************************/
 #include "ui.h"
 #include <string>
 #include <Windows.h>
@@ -6,7 +13,7 @@ void split_line() {
 	cout << " " << string(100 ,'=') << endl;
 }
 
-/* Print introduction */
+// Print game introduction.
 void print_introduction() {
 	system("cls");	// Clear screen.
 	cout << string(10, '\n');
@@ -14,16 +21,17 @@ void print_introduction() {
 	cout << string(40, ' ') << "PRESS [ SPACE ] TO PLAY." << endl;
 	cout << string(40, ' ') << "PRESS [ H ] FOR GAMING HELP." << endl;
 	cout << string(40, ' ') << "PRESS [ ESC ] TO EXIT." << endl;
-
-	//cout << string(40, ' ') << "PRESS [ I ] FOR INFORMATION." << endl;
-	cout << string(5, '\n');
+	cout << "\n\n\n\n";
+	cout << string(75, ' ') << "By Jed Zhang" << endl;
+	cout << string(75, ' ') << "www.jed123.com" << endl;
 }
 
-/* Print gaming help */
+// Print game help.
 void print_help(int lang) {
 	system("cls");	// Clear screen.
 	cout << string(7, '\n');
 	cout << string(45, ' ') << "NEW ERA BATTLEGROUND " << endl << endl;
+	// English version.
 	if (lang == 0) {
 		cout << "\tIn this game you will play a hero. You will participate in multiple games if you can keep alive.\n\
 	In each game, you will encounter an enemy hero, and you will conduct multiple rounds of fighting.\n\n\
@@ -34,6 +42,7 @@ void print_help(int lang) {
 	game ends immediately and you will see your final score.\n" << endl;
 		cout << "\tEnjoy it!\n" << endl;
 	}
+	// Chinese version.
 	else {
 		cout << "\t  在这个游戏中，你将要扮演一名英雄。你将会参加多场游戏，如果你能一直保持存活的话。每局游戏中，你都会\n\
 	遇到一个敌人英雄，你们将进行多回合的战斗。一开始，双方英雄都各自拥有100点生命值。每一回合中，你和敌\n\
@@ -46,7 +55,7 @@ void print_help(int lang) {
 	cout << string(5, '\n');
 }
 
-/* Print goodbye */
+// Print game exit information.
 void print_bye() {
 	for (int i = 3; i > 0; i--) {
 		system("cls");	// Clear screen.

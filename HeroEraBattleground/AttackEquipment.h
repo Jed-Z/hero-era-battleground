@@ -1,14 +1,13 @@
 /* *************************
 * FileName: AttackEquipment.h
 * Author: Jed Zhang
-* Site: https://www.jed123.com
+* Site: https://www.jed123.com/hero-era-battleground-cpp.html
 * Date: 2018.5.23
-* Description: Declaration of the AttackEquipment class.
+* Description: Declaration of the AttackEquipment class. This is a derived class of Equipment.
 **************************/
 #ifndef _ATKEQUIP_H_
 #define _ATKEQUIP_H_
 #include "Equipment.h"
-#include "DefenceEquipment.h"
 using namespace std;
 
 class AttackEquipment :virtual public Equipment {

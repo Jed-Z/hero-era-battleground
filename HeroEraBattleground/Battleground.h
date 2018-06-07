@@ -1,7 +1,13 @@
+/* *************************
+* FileName: DefenceEquipment.cpp
+* Author: Jed Zhang
+* Site: https://www.jed123.com/hero-era-battleground-cpp.html
+* Date: 2018.6.7
+* Description: Declaration of Battlegroune class.
+**************************/
 #ifndef _BATTLEGROUND_H_
 #define _BATTLEGROUND_H_
 #include "Hero.h"
-//#include <string>
 #include <iostream>
 using namespace std;
 

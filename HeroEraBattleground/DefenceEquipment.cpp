@@ -1,7 +1,7 @@
 /* *************************
 * FileName: DefenceEquipment.cpp
 * Author: Jed Zhang
-* Site: https://www.jed123.com
+* Site: https://www.jed123.com/hero-era-battleground-cpp.html
 * Date: 2018.5.23
 * Description: Implementation of DefenceEquipment class.
 **************************/

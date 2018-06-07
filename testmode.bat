@@ -1,0 +1,1 @@
+.\Release\HeroEraBattleground.exe -t

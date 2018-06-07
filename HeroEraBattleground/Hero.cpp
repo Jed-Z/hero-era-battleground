@@ -1,7 +1,7 @@
 /* *************************
 * FileName: Hero.cpp
 * Author: Jed Zhang
-* Site: https://www.jed123.com
+* Site: https://www.jed123.com/hero-era-battleground-cpp.html
 * Date: 2018.6.2
 * Description: Implementation of  Hero class.
 **************************/
@@ -11,7 +11,7 @@
 #include <cstdlib>
 #include <Windows.h>
 
-extern double myrand();	// This function ss defined in main.cpp.
+extern double myrand();	// This function is defined in main.cpp.
 
 /* Constructors and destructor */
 Hero::Hero() :_name("My Hero"), _money(0), _health(0), _phyAtk(0), _magAtk(0), _phyDef(0), _magDef(0) {}
@@ -68,6 +68,10 @@ Equipment* Hero::get_equipment(int num) const {
 		return nullptr;
 	}
 }
+
+// get_real_* functions are used to calculate the "real" attack or defence when an
+// attack actually happens. For example, get_real_phyAtk returns the hero's basic
+// phyAtk plus every equipments' phyAtk. See the document for more details.
 int Hero::get_real_phyAtk() const {
 	// Initialize result with the hero's basic phyAtk
 	int result = get_phyAtk();
@@ -112,9 +116,11 @@ int Hero::get_real_magDef() const {
 	}
 	return result;
 }
+// Use to calculate how much probability when a crit attack happens.
 double Hero::get_crit_chance() const {
 	return (get_money() >= C_CRIT_MONEY) ? 1.0 : static_cast<double>(get_money()) / C_CRIT_MONEY;
 }
+// Judge whether the hero is alive or not.
 bool Hero::isalive() const { return get_health() > 0; }
 
 /* Print functions */
@@ -291,6 +297,7 @@ bool Hero::buy_equipment(Equipment* equip) {
 		return true;
 	}
 }
+// Operator overloading +=
 Hero& Hero::operator+=(Equipment* equip) {
 	this->buy_equipment(equip);
 	return *this;
@@ -350,6 +357,7 @@ bool Hero::sell_equipment(int num) {
 		return false;
 	}
 }
+// Operator overloading -=
 Hero& Hero::operator-=(int num) {
 	this->sell_equipment(num);
 	return *this;

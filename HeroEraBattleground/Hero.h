@@ -1,7 +1,7 @@
 /* *************************
 * FileName: Hero.h
 * Author: Jed Zhang
-* Site: https://www.jed123.com
+* Site: https://www.jed123.com/hero-era-battleground-cpp.html
 * Date: 2018.5.23
 * Description: Declaration of Hero class.
 **************************/

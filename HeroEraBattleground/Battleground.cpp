@@ -1,3 +1,10 @@
+/* *************************
+* FileName: DefenceEquipment.cpp
+* Author: Jed Zhang
+* Site: https://www.jed123.com/hero-era-battleground-cpp.html
+* Date: 2018.6.7
+* Description: Implementation of Battlegroune class.
+**************************/
 #include "macro.h"
 #include "Battleground.h"
 #include "ui.h"
@@ -6,8 +13,8 @@
 #include <Windows.h>
 using namespace std;
 
-extern double myrand();
-extern string enemyNameArr[];
+extern double myrand();	// This function is defined in main.cpp.
+extern string enemyNameArr[];	// This variable is in main.cpp. Contains several enemys' names.
 
 /* Constructors */
 Battleground::Battleground(string playerName, string enemyName)
@@ -32,8 +39,6 @@ Battleground::Battleground(string playerName, string enemyName)
 	_inventory.push_back(shield);
 	_inventory.push_back(immunity);
 	_inventory.push_back(magnetic_field);
-
-
 }
 
 /* Get functions */
@@ -85,6 +90,7 @@ void Battleground::print_final()
 
 
 /* Core loop functions */
+// Attention! The relationship between "game" and "round" is explained in the document.
 bool Battleground::round_loop() {
 	while (true)
 	{

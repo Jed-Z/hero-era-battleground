@@ -1,3 +1,11 @@
+/* *************************
+* FileName: macro.h
+* Author: Jed Zhang
+* Site: https://www.jed123.com/hero-era-battleground-cpp.html
+* Date: 2018.6.7
+* Description: Constant definitions. See the document for more details.
+**************************/
+
 /* Those preprocessor directives use Windwos API to print colorful characters */
 #define SET_CYAN SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY|FOREGROUND_GREEN|FOREGROUND_BLUE)
 #define SET_WHITE SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY|FOREGROUND_RED|FOREGROUND_GREEN | FOREGROUND_BLUE)
@@ -5,7 +13,7 @@
 #define SET_GREEN SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY|FOREGROUND_GREEN)
 #define SET_YELLOW SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY|FOREGROUND_RED|FOREGROUND_GREEN)
 
-/* Gaming constants */
+/* Gaming constants ( begin with "C_" ) */
 // The ratio that by which a hero's defence ability can reduce the damage taken.
 // This value should not be too big. See the document for more details.
 #define C_IMMUNE 24.0
