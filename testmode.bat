@@ -1,1 +1,1 @@
-.\Release\HeroEraBattleground.exe -t
+.\Debug\HeroEraBattleground.exe -t

@@ -16,7 +16,7 @@ using namespace std;
 extern double myrand();	// This function is defined in main.cpp.
 extern string enemyNameArr[];	// This variable is in main.cpp. Contains several enemys' names.
 
-/* Constructors */
+/* Constructors and destructor */
 Battleground::Battleground(string playerName, string enemyName)
 	:_player(playerName), _enemy(enemyName), _game(0), _round(0), _score(0) {
 	/* Set console window to 120x30 */
@@ -39,6 +39,14 @@ Battleground::Battleground(string playerName, string enemyName)
 	_inventory.push_back(shield);
 	_inventory.push_back(immunity);
 	_inventory.push_back(magnetic_field);
+}
+Battleground::~Battleground() {
+	// Delete the pointers in _inventory one by one.
+	while (_inventory.size()) {
+		Equipment* temp = _inventory.back();
+		delete temp;
+		_inventory.pop_back();
+	}
 }
 
 /* Get functions */

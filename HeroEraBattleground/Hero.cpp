@@ -3,7 +3,7 @@
 * Author: Jed Zhang
 * Site: https://www.jed123.com/hero-era-battleground-cpp.html
 * Date: 2018.6.2
-* Description: Implementation of  Hero class.
+* Description: Implementation of Hero class.
 **************************/
 #include "Hero.h"
 #include "macro.h"
@@ -21,7 +21,7 @@ Hero::Hero(string name, int money, int health, int phyAtk, int magAtk, int phyDe
 	// Function body is empty.
 }
 Hero::~Hero() {
-	// Delete the pointers in _equipvec one by one.
+	// Remove the pointers in _equipvec one by one.
 	while (_equipvec.size()) {
 		Equipment* temp = _equipvec.back();
 		//delete temp;

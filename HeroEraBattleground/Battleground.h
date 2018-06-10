@@ -15,13 +15,14 @@ class Battleground {
 private:
 	Hero _player;
 	Hero _enemy;
-	int _game;
-	int _round;
-	int _score;
-	vector<Equipment*> _inventory;
+	int _game;	// How many games have you played?
+	int _round;	// How many rounds have you played? Note that the concept of "game" and "round" is in the document.
+	int _score;	// The player's total score.
+	vector<Equipment*> _inventory;	// Pre-defined equipments.
 public:
+	/* Constructors and destructor */
 	Battleground(string playerName, string enemyName);
-	/* Constructors */
+	~Battleground();
 
 	/* Get functions */
 	int get_game() const;
