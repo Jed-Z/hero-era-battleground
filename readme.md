@@ -18,4 +18,4 @@
 
 ## 关于 ##
 * 项目地址： [Github](https://github.com/jed-z/HeroEraBattleground)
-* 作者主页： [Jed的实验室](https://www.jed123.com)
+* 作者主页： [一个简单的 C++ 控制台回合制游戏 - Jed伪极客](https://www.jeddd.com/article/hero-era-battleground-cpp.html)
